@@ -1,0 +1,50 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		//declaracion de variables
+		float vida;
+		int nivel;
+		float vidafinal;
+		string nivelintroducido;
+		string vidaintroducida;
+		string clase;
+		
+		//input teclado
+		Console.WriteLine("Introduce el nivel:");
+		nivelintroducido = Console.ReadLine();
+		
+		Console.WriteLine("Introduce el valor inicial de la vida:");
+		vidaintroducida = Console.ReadLine();
+		
+		Console.WriteLine("Introduce tu clase: Melé/Rango" );
+		clase = Console.ReadLine();
+		
+		//conversion
+		nivel = Convert.ToInt32(nivelintroducido);
+		vida = Convert.ToSingle(vidaintroducida);
+		
+		if (clase == "Melé")
+		{
+			vidafinal = vida * nivel * 1.5f;
+				
+		}
+		else if (clase == "Rango")
+		{
+			vidafinal = vida * nivel;
+		}
+		
+		else 
+		{
+			Console.WriteLine("Error al introducir la clase");
+			vidafinal = -1;
+		
+		}
+		Console.WriteLine("Tu nivel es: " + nivel);
+		Console.WriteLine("Tu vida inicial es: " + vida);
+		Console.WriteLine("Tu vida final es: " + vidafinal);
+		
+	}
+}
