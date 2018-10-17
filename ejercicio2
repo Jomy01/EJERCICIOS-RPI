@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numero;
+		string numerointroducido;
+		
+		Console.WriteLine("Introduce un número:");
+		
+		numerointroducido = Console.ReadLine();
+		numero = Convert.ToInt32(numerointroducido);
+		
+		Console.WriteLine("El número introducido es:" + numero);
+	}
+}
