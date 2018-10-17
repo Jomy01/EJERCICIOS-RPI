@@ -1,0 +1,26 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		//declaracion de variables
+		float vida;
+		int nivel;
+		float vidafinal;
+		string nivelintroducido;
+		string vidaintroducida;
+		
+		Console.WriteLine("Introduce el nivel:");
+		nivelintroducido = Console.ReadLine();
+		nivel = Convert.ToInt32(nivelintroducido);
+		
+		Console.WriteLine("Introduce el valor inicial de la vida:");
+		vidaintroducida = Console.ReadLine();
+		vida = Convert.ToSingle(vidaintroducida);
+		
+		vidafinal = vida * nivel;
+		Console.WriteLine("La vida final es: " + vidafinal);
+		
+	}
+}
