@@ -1,0 +1,15 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string mensaje;
+		
+		Console.WriteLine("Introduce un texto:");
+		
+		mensaje = Console.ReadLine();
+		
+		Console.WriteLine("El mensaje introducido es:" + mensaje);
+	}
+}
