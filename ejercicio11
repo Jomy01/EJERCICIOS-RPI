@@ -1,0 +1,84 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int nivel;
+		int vida;
+		string vidaintroducida;
+		string nivelintroducido;
+		float vidaf;
+		string clase;
+		float incremento;
+		string incrementointroducido;
+		
+		Console.WriteLine("Introduce el incremento por nivel: ");
+		incrementointroducido = Console.ReadLine();
+		incremento = Convert.ToSingle(incrementointroducido);
+		
+		if (incremento <= 0)
+			{
+			Console.WriteLine("Error al introducir el incremento de vida");
+			}
+		else
+		{
+			
+		Console.WriteLine("Introduce los puntos de vida: ");
+		vidaintroducida = Console.ReadLine();
+		vida = Convert.ToInt32(vidaintroducida);
+		
+		if (vida <= 0)
+			{
+			Console.WriteLine("Error al introducir la vida");
+			}
+		else
+		{
+		
+		Console.WriteLine("Introduce el nivel: ");
+		nivelintroducido = Console.ReadLine();
+		nivel = Convert.ToInt32(nivelintroducido);
+	
+		if (nivel <= 0)
+			{
+			Console.WriteLine("Error al introducir el nivel");
+			}
+		else
+		{
+			
+		Console.WriteLine("Introduce tu clase: Melé/Rango ");
+		clase = Console.ReadLine();
+		
+		if (clase != "Melé" && clase != "Rango")
+		{
+			Console.WriteLine("Error al introducir la clase");
+		}
+		else
+		{
+		
+		while (nivel <= 10)
+		{
+			
+		if (clase == "Melé")
+			{
+			vidaf = (vida + (nivel * incremento)) * 1.5f;
+			}
+		else
+		{
+			vidaf = vida + nivel * incremento;
+		}
+		
+		
+		
+		Console.WriteLine("Tu nivel es: " +nivel);
+		Console.WriteLine("Tu vida final es: " +vidaf);
+		Console.WriteLine("Tu clase es: " +clase);
+		nivel++;
+		
+		}
+		}	
+		}	
+		}
+		}
+		}
+}
